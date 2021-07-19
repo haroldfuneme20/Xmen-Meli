@@ -4,7 +4,7 @@ import com.xmen.meli.hhfm.model.MutantRequest;
 import org.springframework.stereotype.Service;
 
 @Service
-public class DNAToStringUppercase {
+public class DNAToStringUppercaseService {
     public String DnaToString(MutantRequest arrayDNA){
         String msg = "";
         for (int i=0; i<arrayDNA.dna.length; i++){
