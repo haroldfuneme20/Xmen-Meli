@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class LookingForMutants {
+public class LookingForMutantsService {
     String[] CODES_IS_MUTANT = {"AAAA", "TTTT", "CCCC", "GGGG"};
     String columnFromRow = "";
     boolean mutantDetected;
@@ -101,8 +101,10 @@ public class LookingForMutants {
             secondaryDiagonalBottom="";
         }
         // remove repeated fields
-        listDiagonalDNA.remove(0);
-        listDiagonalDNA.remove(2);
+        if(listDiagonalDNA.size() >2){
+            listDiagonalDNA.remove(0);
+            listDiagonalDNA.remove(2);
+        }
 
         for(int diagonalIndex=0;diagonalIndex<listDiagonalDNA.size();diagonalIndex++) {
             for (String dnaMutant: CODES_IS_MUTANT) {

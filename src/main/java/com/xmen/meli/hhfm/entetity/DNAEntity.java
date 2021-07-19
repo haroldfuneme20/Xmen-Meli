@@ -51,6 +51,5 @@ public class DNAEntity implements Serializable {
     public void setKindPerson(KindPerson kindPerson) {
         this.kindPerson = kindPerson;
     }
-
 }
 
