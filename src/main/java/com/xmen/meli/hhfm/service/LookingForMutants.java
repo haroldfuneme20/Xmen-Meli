@@ -22,6 +22,7 @@ public class LookingForMutants {
         mutantDetected = checkRowsDNA(arrayDNARequest);
         mutantDetected = checkColumnsDNA(arrayDNA);
         mutantDetected = checkDiagonals(arrayDNARequest);
+        // validar si es human o mutant
         return mutantDetected;
     }
 
@@ -51,12 +52,12 @@ public class LookingForMutants {
             listDNA.add(columnFromRow);
             columnFromRow = "";
         }
-        System.out.println("TEST= " + listDNA);
+        //System.out.println("TEST= " + listDNA);
         for(int columnIndex=0;columnIndex<arrayDNA.length;columnIndex++) {
             for (String dnaMutant: CODES_IS_MUTANT) {
-                System.out.println("List : " + listDNA.get(columnIndex));
+                //System.out.println("List : " + listDNA.get(columnIndex));
                 if (listDNA.get(columnIndex).indexOf(dnaMutant) != -1) isMutantCount++;
-                System.out.println("TEST= " + isMutantCount);
+                //System.out.println("TEST= " + isMutantCount);
                 if(checkColumnDNA) break;
             }
             checkColumnDNA = checkIsMutant(isMutantCount);
