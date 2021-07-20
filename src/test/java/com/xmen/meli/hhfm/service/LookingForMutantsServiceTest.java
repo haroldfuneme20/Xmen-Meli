@@ -15,7 +15,7 @@ class LookingForMutantsServiceTest {
 
 
     @Test
-    void checkDNA() {
+    void checkDNATrue() {
         final String[] dna = {   "AgGtGt", "CAGTGt", "TTcTGc", "AtcAGt", "CCaCTt", "CCaCTa" };
         mutantRequest.setDna(dna);
         boolean response = lookingForMutantsService.checkDNA(mutantRequest);
@@ -24,7 +24,7 @@ class LookingForMutantsServiceTest {
     }
 
     @Test
-    void checkDNABad() {
+    void checkDNAFalse() {
         final String[] dna = {   "ATGCGA","CAGTGC","TTATGT","AGAAGG","CCCCTA","TCACTG" };
         mutantRequest.setDna(dna);
         boolean response = lookingForMutantsService.checkDNA(mutantRequest);
