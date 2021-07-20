@@ -18,22 +18,8 @@ class XmenControllerTest {
     @Autowired
     private XmenController xmenController;
 
-    @LocalServerPort
-    private int port;
-    @Autowired
-    private TestRestTemplate restTemplate;
-
-
-    private MutantResponse mutantResponse;
-
     @Test
     public void contextLoads() throws Exception {
-        assertThat(xmenController).isNotNull();
     }
 
-    @Test
-    void isMutant()  throws Exception{
-        assertThat(this.restTemplate.getForObject("http://localhost:" + port + "/mutants",
-                String.class)).contains("/mutants");
-    }
 }
