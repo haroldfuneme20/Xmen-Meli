@@ -38,12 +38,44 @@ OR
 ## WAY TO USE
 
 if you want to use in local you only need to uncomment lines in file application.properties that have comment (LOCAL) and if you want to use in cloud you have to uncomment preview lines and descomment lines with comment (AWS).
-226 / 5000
-Resultados de traducción
-si quieres usar en local solo necesitas descomentar las líneas en el archivo application.properties que tienen comentario (LOCAL) y si quieres usar en la nube tienes que descomentar las líneas de vista previa y descommentar las líneas con comentario (AWS). 
 #### IMPORTANT don't change the lines with comment (NOT TOUCH)
 
+## IF YOU USE AWS
 
+### CRULS
 
+#### POST (/mutant)
+curl --location --request POST 'http://xmenmelielasticbeanstalk-env.eba-q4kdimsm.us-east-2.elasticbeanstalk.com/mutant' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "dna": [
+        "AgGtG",
+        "CAGTG",
+        "TTaTG",
+        "AtccG",
+        "CCcCg"
+    ]
+}'
+
+#### GET (/stats)
+curl --location --request GET 'http://xmenmelielasticbeanstalk-env.eba-q4kdimsm.us-east-2.elasticbeanstalk.com/stats'
+
+## IF YOU USE LOCAL
+### CURLS
+#### POST (/mutant)
+curl --location --request POST 'localhost:8080/mutant' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "dna": [
+        "AgGtGt",
+        "CAGTGt",
+        "TTcTGc",
+        "AtcAGt",
+        "CCaCTa",
+        "CCcCTa"
+    ]
+}'
+#### GET (/stats)
+curl --location --request GET 'localhost:8080/stats'
 
 
