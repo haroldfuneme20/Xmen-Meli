@@ -9,8 +9,8 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.xmen.meli.hhfm</groupId>
-    <artifactId>demo</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <artifactId>HaroldFuneme</artifactId>
+    <version>0.0.1-MELI-XMEN</version>
     <name>x_men_meli</name>
     <description>Demo project for Spring Boot for detect a mutant men</description>
     <properties>
