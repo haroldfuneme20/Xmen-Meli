@@ -26,7 +26,7 @@ public class StatsResponseService {
         statisticsResponse.setCount_mutant_dna((int) countMutantDna);
         statisticsResponse.setRatio(average);
         ResponseEntity<StatisticsResponse> response;
-        response= new ResponseEntity(statisticsResponse, HttpStatus.BAD_REQUEST);
+        response= new ResponseEntity(statisticsResponse, HttpStatus.OK);
         return response ;
     }
 }
