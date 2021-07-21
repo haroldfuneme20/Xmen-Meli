@@ -26,7 +26,7 @@ public class LookingForMutantsService {
         return mutantDetected;
     }
 
-    public boolean checkRowsDNA(MutantRequest arrayDNARequest) {
+    private boolean checkRowsDNA(MutantRequest arrayDNARequest) {
         boolean checkRowsDNA = false;
         String [] arrayDNA = arrayDNARequest.dna;
         //System.out.println("ROW TO TEST " + arrayDNA);
@@ -41,7 +41,7 @@ public class LookingForMutantsService {
         return checkRowsDNA;
     }
 
-    public boolean checkColumnsDNA(String [] arrayDNA){
+    private boolean checkColumnsDNA(String [] arrayDNA){
         boolean checkColumnDNA = false;
         List<String> listDNA = new ArrayList<String>();
 
@@ -66,7 +66,7 @@ public class LookingForMutantsService {
         return checkColumnDNA;
     }
 
-    public boolean checkDiagonals(MutantRequest arrayDNARequest){
+    private boolean checkDiagonals(MutantRequest arrayDNARequest){
         boolean checkDiagonalDNA = false;
         String[] arrayDNA = arrayDNARequest.dna;
         //System.out.println("ROW TO TEST " + arrayDNA.length);
@@ -120,7 +120,7 @@ public class LookingForMutantsService {
         return checkDiagonalDNA;
     }
 
-    public char[][] convertToMatrix(String[] arrayDNA){
+    private char[][] convertToMatrix(String[] arrayDNA){
         for(int row=0;row<arrayDNA.length;row++){
             for(int column=0;column<arrayDNA.length;column++) {
                 matrix[row][column] = arrayDNA[row].toUpperCase().toCharArray()[column];
@@ -128,7 +128,7 @@ public class LookingForMutantsService {
         }
         return matrix;
     }
-    public void printMatrix(String[] arrayDNA){
+    private void printMatrix(String[] arrayDNA){
         System.out.println("\nArray nxn");
         for(int i=0;i<arrayDNA.length;i++) {
             for(int j=0;j<arrayDNA.length;j++){
@@ -137,7 +137,7 @@ public class LookingForMutantsService {
             System.out.println();
         }
     }
-    public boolean checkIsMutant( int isMutantCount) {
+    private boolean checkIsMutant( int isMutantCount) {
         mutantDetected = (isMutantCount>1)? true: false;
         return mutantDetected;
     }
