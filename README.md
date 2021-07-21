@@ -41,7 +41,7 @@ if you want to use in local you only need to uncomment lines in file application
 226 / 5000
 Resultados de traducción
 si quieres usar en local solo necesitas descomentar las líneas en el archivo application.properties que tienen comentario (LOCAL) y si quieres usar en la nube tienes que descomentar las líneas de vista previa y descommentar las líneas con comentario (AWS). 
-IMPORTANT don't change the lines with comment (NOT TOUCH)
+## IMPORTANT don't change the lines with comment (NOT TOUCH)
 
 
 
